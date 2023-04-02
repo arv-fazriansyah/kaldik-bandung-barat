@@ -3,7 +3,7 @@ Kalender Pendidikan Kab. Bandung Barat, Otomatis Update Setiap Saat Jika Ada Per
 
 ## ★ Tambahkan Ke Google Calendar
 
-1. Buka Halaman [Kalender Pendidikan](https://arv-fazriansyah.github.io/kaldik-bandung-barat/)
+1. Buka Halaman >> [Kalender Pendidikan](https://arv-fazriansyah.github.io/kaldik-bandung-barat/)
 2. Klik Tambahkan
 
 ## ★ Sumber Data
@@ -12,5 +12,5 @@ Kalender Pendidikan Kab. Bandung Barat, Otomatis Update Setiap Saat Jika Ada Per
 
 ## ★ Contact
 
-- Email: @[arvib@fazriansyah.eu.org](arvib@fazriansyah.eu.org)
+- Email: [arvib@fazriansyah.eu.org](arvib@fazriansyah.eu.org)
 
