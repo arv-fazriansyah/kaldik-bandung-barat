@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kalender Google</title>
+    <meta charset='utf-8' />
+    
+    <!-- GitHub Favicon -->
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon-dark.png" type="image/x-icon"/>
+    
+    <title>Google Calendar FullCalendar</title>
+    
+  <style>
+    html, body {
+      margin: 0;
+      background-color: #343a40;
+      color: #fff;
+      padding: 0;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    :root {
+      --fc-page-bg-color: #343a40; 
+      --fc-neutral-bg-color: hsl(210deg 29.41% 13.33%);
+      --fc-list-event-hover-bg-color: #2c3e50;
+      --fc-today-bg-color: #8fdf82;
+      }
+    #calendar {
+      max-width: 500px;
+      margin: 20px auto;
+    }
+  </style>
+
+  </style>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.5/index.global.min.js'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,listYear'
+          },
+          displayEventTime: false, // don't show the time column in list view
+          googleCalendarApiKey: 'AIzaSyDcnW6WejpTOCffshGDDb4neIrXVUA1EAE',
+          // Holidays
+          events: 'd7bd90787ebbaccfefd3a6c08c946df42713a912146637ec67906f5692ee0d12@group.calendar.google.com',
+          eventClick: function(arg) {
+            // opens events in a popup window
+            window.open(arg.event.url, '_blank', 'width=700,height=600');
+            // prevents current tab from navigating
+            arg.jsEvent.preventDefault();
+          }
+        });
+        calendar.render();
+      });
+    </script>
   </head>
   <body>
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&showPrint=0&showTabs=1&showCalendars=0&showTz=0&showDate=1&src=ZDdiZDkwNzg3ZWJiYWNjZmVmZDNhNmMwOGM5NDZkZjQyNzEzYTkxMjE0NjYzN2VjNjc5MDZmNTY5MmVlMGQxMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%232952a3" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <div id='calendar'></div>
   </body>
 </html>
