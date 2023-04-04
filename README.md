@@ -6,7 +6,7 @@ Kalender Pendidikan Kab. Bandung Barat, Otomatis Update Setiap Saat Jika Ada Per
 1. Buka Halaman >> [Kalender Pendidikan](https://arv-fazriansyah.github.io/kaldik-bandung-barat/)
 2. Login Gmail
 3. Klik Tombol Tambah
-4. 
+4. Buka Google Calender di Smartphone
 
 ## ★ Sumber Data
 
